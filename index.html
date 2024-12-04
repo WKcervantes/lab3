@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		//decalro variables
+		let num1 = 0;
+        let num2 = 0;
+        let operacion = "";
+
+		function realizarOperacion(num1,num2,operacion){
+			if (operacion === "sumar") {return num1 + num2;
+			} else if (operacion === "restar") {return num1 -num2;
+			} else if  (operacion === "mult") {return num1 * num2;} 
+			else if (operacion === "divi") {if (num2 === 0) 
+				{return "Error: division por cero no pemitida";} return num1 / num2;}
+				else if (operacion == "salir") {}
+
+				else { return "error: operacion no valida";}}
+
+				
+		while(operacion !="salir"){
+			operacion = prompt("ingresar operaciones");
+			if (operacion == "salir") {
+
+			}else{
+			num1 = parseFloat(prompt("Ingrese el primer numero: "));
+			num2 = parseFloat(prompt("Ingrese el segundo numero: "));
+			let resultado = realizarOperacion(num1, num2, operacion);
+			console.log(resultado);
+			document.write("El resultado es: "+resultado);}
+		}
+		console.log("Gracias por elegirnos")
+		document.write("Gracias por elegirnos")
+		
+	
+
+       
+
+		
+
+
+
+
+		
+	</script>
+
+
+
+</body>
+</html>
